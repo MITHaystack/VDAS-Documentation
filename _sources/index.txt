@@ -6,7 +6,7 @@
 Mark6 VLBI Data Acquisition System
 ==================================
 
-Welcome to the Mark6 wiki! This is where you can find answers to all things
+Welcome to the Mark6 website! This is where you can find answers to all things
 related to the Mark6 VLBI Data Acquisition System.
 If you have any questions or comments, we would love to hear from you.
 Please email us: del@haystack.mit.edu.
@@ -21,7 +21,7 @@ Site Map
 ========
 
 ..  toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
     introduction
     vdas
@@ -33,6 +33,5 @@ Indices and tables
 ==================
 
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
 
