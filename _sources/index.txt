@@ -25,9 +25,12 @@ Site Map
 
     introduction
     vdas
+    download
     install
+    faq
     todo
     news
+    team
 
 Indices and tables
 ==================
