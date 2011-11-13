@@ -1,0 +1,176 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Mark6 VLBI Data Acquisition System (VDAS) &mdash; Mark6 VDAS 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Mark6 VDAS 0.1 documentation" href="index.html" />
+    <link rel="next" title="VLBI Data Acquisition Systems" href="vdas.html" />
+    <link rel="prev" title="Welcome to Mark6 VDAS’s documentation!" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="vdas.html" title="VLBI Data Acquisition Systems"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Mark6 VDAS’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Mark6 VDAS 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="mark6-vlbi-data-acquisition-system-vdas">
+<h1>Mark6 VLBI Data Acquisition System (VDAS)<a class="headerlink" href="#mark6-vlbi-data-acquisition-system-vdas" title="Permalink to this headline">¶</a></h1>
+<p>Welcome to the Mark6 wiki! This is where you can find answers to all things
+related to the Mark6 VLBI Data Acquisition System. If you have any questions or
+comments, we would love to hear from you. Please email us: <a class="reference external" href="mailto:del&#37;&#52;&#48;haystack&#46;mit&#46;edu">del<span>&#64;</span>haystack<span>&#46;</span>mit<span>&#46;</span>edu</a>.</p>
+<p>The Mark6 VLBI Data Acquisition System is the next generation, high speed VLBI
+Data Acquisition System (DAS) jointly developed by <a class="reference external" href="http://www.haystack.mit.edu/">MIT Haystack Observatory</a> and <a class="reference external" href="http://science.gsfc.nasa.gov/606.1/HECN.html">NASA Goddard Space Flight Center High End
+Computer Network Team</a>.</p>
+<div class="section" id="features">
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Open-source software implementation (C/C++ and Python) released under the
+GPLv2. license.</li>
+<li>Open hardware platform based on inexpensive, high-performance
+COTS hardware</li>
+<li>16Gbps sustained record and playback capability</li>
+<li>Easily upgradeable record/playback capability as COTS hardware becomes more
+capable (32-Gbps capable hardware currently being evaluated)</li>
+<li>General Ethernet packet recorder ĕasily adapted to other interfaces as well)</li>
+<li>Easily upgradeable on Moore&#8217;s Law curve</li>
+<li>Debian Linux OS</li>
+<li>Record and playback as standard Linux files</li>
+<li>VLBI Disk-Adaptive File System (VDAFS, or &#8220;VDAF&#8221; for short)</li>
+<li>Smooth transition from Mark 5</li>
+<li>Leverages decade of operational experience with Mark5 system to provide a
+simpler, easier to maintain, and more robust system.</li>
+</ul>
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Figure 1 provides a high level overview of the Mark6 System. The Mark6 system
+consists of two logical components: (1) a 4U Controller, which contains
+motherboard, CPU, RAM, RAID controllers, etc. and (2) one or more 8-disk
+Modules, which is connected to the controller via SAS2, SFF-8088 connectors. The
+Controller runs the Linux Operating System, and includes the control software
+required to control the Mark6, as well as the data plane software required to
+transfer data into and out of the system.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="http://dl.dropbox.com/u/18326850/Mark6/mark6-architecture.png"><img alt="http://dl.dropbox.com/u/18326850/Mark6/mark6-architecture.png" src="http://dl.dropbox.com/u/18326850/Mark6/mark6-architecture.png" /></a>
+<p class="caption"><strong>Figure 1:</strong> VLBI data are input/output to the system via one ore more
+10 Gbps Ethernet interfaces and stored/retrieved to/from one or more
+8-pack disk modules. Commands and responses are exchanged via a
+100 Mbps/1 Gbps Ethernet interface using either a VSI-S or XML-based
+machine-to-machine protocol.</p>
+</div>
+<p>The Mark6 is capable of operating in one of two modes:</p>
+<ol class="arabic simple">
+<li><strong>Data Input Module (DIM):</strong> data are recorded from network interfaces onto
+disk.</li>
+<li><strong>Data Output Module (DOM):</strong> data are read from disk and played out over</li>
+</ol>
+<blockquote>
+<div>network interface.</div></blockquote>
+<p>Data are input and output to the system via one or more 10 Gigabit
+Ethernet interfaces and is stored on one or more disk modules. Each
+disk module comprises 8 SATA disks.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Mark6 VLBI Data Acquisition System (VDAS)</a><ul>
+<li><a class="reference internal" href="#features">Features</a></li>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Welcome to Mark6 VDAS&#8217;s documentation!</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="vdas.html"
+                        title="next chapter">VLBI Data Acquisition Systems</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/introduction.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="vdas.html" title="VLBI Data Acquisition Systems"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Mark6 VDAS’s documentation!"
+             >previous</a> |</li>
+        <li><a href="index.html">Mark6 VDAS 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, David Lapsley.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
+    </div>
+  </body>
+</html>

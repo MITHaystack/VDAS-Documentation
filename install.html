@@ -1,0 +1,165 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Installation &mdash; Mark6 VDAS 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Mark6 VDAS 0.1 documentation" href="index.html" />
+    <link rel="next" title="&lt;no title&gt;" href="todo.html" />
+    <link rel="prev" title="VLBI Data Acquisition Systems" href="vdas.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="todo.html" title="&lt;no title&gt;"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="vdas.html" title="VLBI Data Acquisition Systems"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Mark6 VDAS 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<p>Installation in the field will be via binary, USB &#8220;kick-start&#8221; flash drives.</p>
+<p>The steps below are for developers interested in installing this software on
+their own computers.</p>
+<ol class="arabic">
+<li><p class="first">Download and install debian squeeze (6.0.4) from netinst image. The iso
+image is available from:</p>
+<div class="highlight-python"><pre>http://cdimage.debian.org/debian-cd/6.0.3/amd64/iso-cd/debian-6.0.3-amd64-netinst.iso</pre>
+</div>
+</li>
+<li><p class="first">Install git-core and sudo (as root user):</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># apt-get install git-core sudo</span>
+<span class="c"># git clone git@github.com:MITHaystackObservatory/Mark6.git</span>
+<span class="c"># cd Mark6</span>
+<span class="c"># export VDAS_ROOT=/home/&lt;username&gt;/Mark6</span>
+<span class="c"># export VDAS_USER=&lt;username&gt;</span>
+<span class="c"># ./setup -b</span>
+<span class="c"># ./setup -p</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Add the following line to /etc/modules:</p>
+<div class="highlight-python"><pre>pf_ring transparent_mode=0 min_num_slots=16384 enable_ip_defrag=1</pre>
+</div>
+</li>
+<li><p class="first">Reboot:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># reboot</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Add the following to /etc/apt/sources.list:</p>
+<div class="highlight-python"><pre>deb http://debian.lcs.mit.edu/debian/ squeeze main non-free contrib
+deb-src http://debian.lcs.mit.edu/debian/ squeeze main non-free contrib
+deb http://hwraid.le-vert.net/debian squeeze main</pre>
+</div>
+</li>
+<li><p class="first">Update apt-get and install RAID packages:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># apt-get update</span>
+<span class="c"># apt-get install megacli megactl lshw</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Setup the build environment:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># ./setup --build</span>
+<span class="c"># ./setup --install</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">After installation, add the following to the .bashrc of the ${VDAS_USER}:</p>
+<div class="highlight-python"><pre>export MANPATH=/opt/mit/mark6/man:${MANPATH}
+export PATH=/opt/mit/mark6/bin:${PATH}</pre>
+</div>
+</li>
+</ol>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="vdas.html"
+                        title="previous chapter">VLBI Data Acquisition Systems</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="todo.html"
+                        title="next chapter">&lt;no title&gt;</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/install.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="todo.html" title="&lt;no title&gt;"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="vdas.html" title="VLBI Data Acquisition Systems"
+             >previous</a> |</li>
+        <li><a href="index.html">Mark6 VDAS 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, David Lapsley.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
+    </div>
+  </body>
+</html>
