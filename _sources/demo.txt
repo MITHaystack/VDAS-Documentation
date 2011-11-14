@@ -1,0 +1,45 @@
+Demonstrations
+==============
+
+On Monday, October 24th, 2011 a two antenna, a successful 16 Gbps experiment
+was run between Westford Radio Telescope
+`Westford <http://www.haystack.mit.edu/obs/westford/history.html>`_
+ in Westford, MA, and the 
+`Goddard Geophysical and Astronomical Observatory (GGAO)
+<http://cddis.nasa.gov/ggao/>`_ Radio Telescope in Greenbelt, MD.
+
+The successful demonstration was the result of a lot of hard work from 
+folks at 
+`MIT Haystack Observatory <http://www.haystack.mit.edu/>`_ and
+`NASA Goddard Space Flight Center High End
+Computer Network Team <http://science.gsfc.nasa.gov/606.1/HECN.html>`_.
+
+Results
+-------
+
+Figures 1 through 3 show the results of the 16 Gbps demonstration.
+
+.. figure:: images/201110-ethernet-read.png
+  :align: center
+  :scale: 100%
+
+  **Figure 1:** Average receive bit rate versus time for each of the four
+  10 GE interfaces on the Mark6 VDAS. Each interface maintains
+  4 Gbps for the duration fo the 43 second scan.
+
+.. figure:: images/201110-file-write.png
+  :align: center
+  :scale: 100%
+
+  **Figure 2:** Average write bit rate versus time for each of the four
+  8-disk modules on the Mark6 VDAS. Each interface maintains
+  4 Gbps for the duration fo the 43 second scan.
+
+.. figure:: images/201110-correlation-results.png
+  :align: center
+  :scale: 100%
+
+  **Figure 3:** Final (successful) correlation results for a single
+  500 MHz channel.
+
+
