@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Release Notes &mdash; Mark6 VDAS 0.1 documentation</title>
+    <title>Release Notes &mdash; Mark6 VDAS 0.6.0alpha documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '0.1',
+        VERSION:     '0.6.0alpha',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -25,8 +25,9 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="Mark6 VDAS 0.1 documentation" href="index.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="todo.html" />
+    <link rel="top" title="Mark6 VDAS 0.6.0alpha documentation" href="index.html" />
+    <link rel="next" title="Team" href="team.html" />
+    <link rel="prev" title="Frequently Asked Questions" href="faq.html" />
  
 <script type="text/javascript">
   var _gaq = _gaq || [];
@@ -52,9 +53,12 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="todo.html" title="&lt;no title&gt;"
+          <a href="team.html" title="Team"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="faq.html" title="Frequently Asked Questions"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">Mark6 VDAS 0.1 documentation</a> &raquo;</li> 
+        <li><a href="index.html">Mark6 VDAS 0.6.0alpha documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -66,49 +70,25 @@
   <div class="section" id="release-notes">
 <h1>Release Notes<a class="headerlink" href="#release-notes" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="release-0-1-7-5-2011">
-<h2>Release 0.1     7/5/2011<a class="headerlink" href="#release-0-1-7-5-2011" title="Permalink to this headline">¶</a></h2>
-<p>David Lapsley&lt;<a class="reference external" href="mailto:del&#37;&#52;&#48;haystack&#46;mit&#46;edu">del<span>&#64;</span>haystack<span>&#46;</span>mit<span>&#46;</span>edu</a>&gt;</p>
-<div class="section" id="description">
-<h3>DESCRIPTION<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h3>
+<h2>Release 0.1 7/5/2011<a class="headerlink" href="#release-0-1-7-5-2011" title="Permalink to this headline">¶</a></h2>
+<p>Committer: David Lapsley&lt;<a class="reference external" href="mailto:del&#37;&#52;&#48;haystack&#46;mit&#46;edu">del<span>&#64;</span>haystack<span>&#46;</span>mit<span>&#46;</span>edu</a>&gt;</p>
 <p>First internal release. End to end data path, supporting infrastructure.</p>
-</div>
-<div class="section" id="features">
-<h3>FEATURES<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h3>
-<ul>
-<li><p class="first">Incorporated PF_RING code and module to get 8 Gbps NIC to Drive throughput.</p>
-</li>
-<li><p class="first">Implemented continuous integration and unit testing framework.</p>
-</li>
-<li><p class="first">Main program with options parsing.</p>
-</li>
-<li><p class="first">Support modules including:</p>
-<blockquote>
-<div><ul class="simple">
-<li>BufferManager</li>
-<li>ThreadPool</li>
-<li>SocketManager</li>
-<li>WriterTask</li>
+<ul class="simple">
+<li>Incorporated PF_RING code and module to get 8 Gbps NIC to Drive throughput.</li>
+<li>Implemented continuous integration and unit testing framework.</li>
+<li>Main program with options parsing.</li>
 </ul>
-</div></blockquote>
-</li>
-</ul>
-</div>
 </div>
 <div class="section" id="release-0-2-7-7-2011">
-<h2>Release 0.2     7/7/2011<a class="headerlink" href="#release-0-2-7-7-2011" title="Permalink to this headline">¶</a></h2>
-<p>David Lapsley&lt;<a class="reference external" href="mailto:del&#37;&#52;&#48;haystack&#46;mit&#46;edu">del<span>&#64;</span>haystack<span>&#46;</span>mit<span>&#46;</span>edu</a>&gt;</p>
-<div class="section" id="id1">
-<h3>DESCRIPTION<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<p>Major performance milestone.</p>
-<p>Using a a single 10 GE network interface, and a single disk pack
+<h2>Release 0.2 7/7/2011<a class="headerlink" href="#release-0-2-7-7-2011" title="Permalink to this headline">¶</a></h2>
+<p>Committer: David Lapsley&lt;<a class="reference external" href="mailto:del&#37;&#52;&#48;haystack&#46;mit&#46;edu">del<span>&#64;</span>haystack<span>&#46;</span>mit<span>&#46;</span>edu</a>&gt;</p>
+<p>Major performance milestone.
+Using a a single 10 GE network interface, and a single disk pack
 (with only 7 disks, one has failed), able to get ~ 7.6 Gbps net
 to disk throughput (with 3% packet loss and ~95% utilization of a
 single CPU ~ out of 16 total CPUs). Throughput on both transmit
 and receive checked, and volume of data written over test interval
 checked. Test duraiton was 30 seconds.</p>
-</div>
-<div class="section" id="id2">
-<h3>FEATURES<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Ported code to debian squeeze (6.0.2) with 2.6.32 kernel.</li>
 <li>Removed source dependencies in favor of binary debian packages.</li>
@@ -123,90 +103,46 @@ journaling on ext4 file systems and enable driver level throughput
 optimizations.</li>
 </ul>
 </div>
-</div>
 <div class="section" id="release-0-4-7-15-2011">
-<h2>Release 0.4     7/15/2011<a class="headerlink" href="#release-0-4-7-15-2011" title="Permalink to this headline">¶</a></h2>
-<p>David Lapsley&lt;<a class="reference external" href="mailto:del&#37;&#52;&#48;haystack&#46;mit&#46;edu">del<span>&#64;</span>haystack<span>&#46;</span>mit<span>&#46;</span>edu</a>&gt;</p>
-<div class="section" id="id3">
-<h3>DESCRIPTION<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<h2>Release 0.4 7/15/2011<a class="headerlink" href="#release-0-4-7-15-2011" title="Permalink to this headline">¶</a></h2>
+<p>Committer: David Lapsley&lt;<a class="reference external" href="mailto:del&#37;&#52;&#48;haystack&#46;mit&#46;edu">del<span>&#64;</span>haystack<span>&#46;</span>mit<span>&#46;</span>edu</a>&gt;</p>
 <p>Major performance milestone. Application software achieves maximum
 network to disk throughput supported by hardware platform and drivers:
 14.1 Gbps sustained for 60 seconds (still room to optimize platform
 configuration). This was using 4 x 8-disk modules. Each module
 configured as a separate RAID-0 array.</p>
-</div>
-<div class="section" id="id4">
-<h3>FEATURES<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
-<ul>
-<li><p class="first">Finalized application architecture (multi-process architecture
-rather than mult-threaded)</p>
-</li>
-<li><p class="first">Optimized PF_RING driver parameters</p>
-</li>
-<li><p class="first">Optimized Myricom driver settings</p>
-</li>
-<li><p class="first">Optimized IRQ SMP processor affinity for LSI MegaRAID and
-Myricom Ethernet devices.</p>
-</li>
-<li><p class="first">Optimized application process SMP processor affinity.</p>
-</li>
-<li><p class="first">Optimized application buffer sizes, and data path.</p>
-</li>
-<li><p class="first">Optimized network packet capture code.</p>
-</li>
-<li><p class="first">Optimized internal buffering code.</p>
-</li>
-<li><p class="first">Optimized disk writing code.</p>
-</li>
-<li><p class="first">Application includes the following major classes:</p>
-<blockquote>
-<div><ul>
-<li><dl class="first docutils">
-<dt>NetReader: Reads data from PF_RING buffers and fills BufferPool</dt>
-<dd><p class="first last">allocated buffers with the data.</p>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>BufferPool: Internal buffers optimally sized and aligned for</dt>
-<dd><p class="first last">Direct Disk IO. Includes optimized memory management.</p>
-</dd>
-</dl>
-</li>
-<li><p class="first">FileWriter: Manages memory to disk data transfer.</p>
-</li>
-<li><dl class="first docutils">
-<dt>StatsWriter: Instrumentation class. Periodically logs network and</dt>
-<dd><p class="first last">disk performance statistics.</p>
-</dd>
-</dl>
-</li>
-</ul>
-</div></blockquote>
-</li>
-<li><p class="first">Interactive command line interface that allows user to launch and
-stop capture threads in a convenient manner.</p>
-</li>
-<li><p class="first">Startup scripts that automatically set MegaRAID, Myricom, and
-Application processor affinities at startup.</p>
-</li>
-<li><p class="first">Disk module conditioning scripts that create and configure RAID
+<ul class="simple">
+<li>Finalized application architecture (multi-process architecture
+rather than mult-threaded)</li>
+<li>Optimized PF_RING driver parameters</li>
+<li>Optimized Myricom driver settings</li>
+<li>Optimized IRQ SMP processor affinity for LSI MegaRAID and
+Myricom Ethernet devices.</li>
+<li>Optimized application process SMP processor affinity.</li>
+<li>Optimized application buffer sizes, and data path.</li>
+<li>Optimized network packet capture code.</li>
+<li>Optimized internal buffering code.</li>
+<li>Optimized disk writing code.</li>
+<li>Application includes the following major classes: NetReader, BufferPool,
+FileWriter, and StatsWriter.</li>
+<li>NetReader: Reads data from PF_RING buffers and fills BufferPool allocated buffers with the data.</li>
+<li>BufferPool: Internal buffers optimally sized and aligned for Direct Disk IO. Includes optimized memory management.</li>
+<li>FileWriter: Manages memory to disk data transfer.</li>
+<li>StatsWriter: Instrumentation class. Periodically logs network and disk performance statistics.</li>
+<li>Interactive command line interface that allows user to launch and
+stop capture threads in a convenient manner.</li>
+<li>Startup scripts that automatically set MegaRAID, Myricom, and
+Application processor affinities at startup.</li>
+<li>Disk module conditioning scripts that create and configure RAID
 arrays, label and partition virtual drives, create EXT4 file systems,
-and optimize file system parameters.</p>
-</li>
+and optimize file system parameters.</li>
 </ul>
-</div>
 </div>
 <div class="section" id="release-0-4-1-9-20-2011">
-<h2>Release 0.4.1   9/20/2011<a class="headerlink" href="#release-0-4-1-9-20-2011" title="Permalink to this headline">¶</a></h2>
-<p>David Lapsley&lt;<a class="reference external" href="mailto:del&#37;&#52;&#48;haystack&#46;mit&#46;edu">del<span>&#64;</span>haystack<span>&#46;</span>mit<span>&#46;</span>edu</a>&gt;</p>
-<div class="section" id="id5">
-<h3>DESCRIPTION<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<h2>Release 0.4.1 9/20/2011<a class="headerlink" href="#release-0-4-1-9-20-2011" title="Permalink to this headline">¶</a></h2>
+<p>Committer: David Lapsley&lt;<a class="reference external" href="mailto:del&#37;&#52;&#48;haystack&#46;mit&#46;edu">del<span>&#64;</span>haystack<span>&#46;</span>mit<span>&#46;</span>edu</a>&gt;</p>
 <p>Added control plane and client to the build. Extended build system
 to do complete build and install.</p>
-</div>
-<div class="section" id="id6">
-<h3>FEATURES<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Incorporated mark6 control plane code (inherited from previous
 dimino6 work).</li>
@@ -215,17 +151,11 @@ dimino6 work).</li>
 /opt/haystack/mark6.</li>
 </ul>
 </div>
-</div>
 <div class="section" id="release-0-4-2-9-28-2011">
-<h2>Release 0.4.2   9/28/2011<a class="headerlink" href="#release-0-4-2-9-28-2011" title="Permalink to this headline">¶</a></h2>
-<p>David Lapsley&lt;<a class="reference external" href="mailto:del&#37;&#52;&#48;haystack&#46;mit&#46;edu">del<span>&#64;</span>haystack<span>&#46;</span>mit<span>&#46;</span>edu</a>&gt;</p>
-<div class="section" id="id7">
-<h3>DESCRIPTION<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<h2>Release 0.4.2 9/28/2011<a class="headerlink" href="#release-0-4-2-9-28-2011" title="Permalink to this headline">¶</a></h2>
+<p>Committer: David Lapsley&lt;<a class="reference external" href="mailto:del&#37;&#52;&#48;haystack&#46;mit&#46;edu">del<span>&#64;</span>haystack<span>&#46;</span>mit<span>&#46;</span>edu</a>&gt;</p>
 <p>Validated 16 Gbps data capture functionality. Recording full
 ethernet frames for robust on-disk framing.</p>
-</div>
-<div class="section" id="id8">
-<h3>FEATURES<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Full ethernet frame capture for robust on-disk framing and ease of
 manipulation. Data capture files stored in standard &#8220;pcap&#8221; format
@@ -246,22 +176,24 @@ FileWriter::buffer_malloc() method.</li>
 be integrated into control plane as conditioning/test scripts).</li>
 </ul>
 </div>
-</div>
 <div class="section" id="release-0-5-0-10-24-2011">
-<h2>Release 0.5.0   10/24/2011<a class="headerlink" href="#release-0-5-0-10-24-2011" title="Permalink to this headline">¶</a></h2>
-<p>David Lapsley&lt;<a class="reference external" href="mailto:del&#37;&#52;&#48;haystack&#46;mit&#46;edu">del<span>&#64;</span>haystack<span>&#46;</span>mit<span>&#46;</span>edu</a>&gt;</p>
-<div class="section" id="id9">
-<h3>DESCRIPTION<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<h2>Release 0.5.0 10/24/2011<a class="headerlink" href="#release-0-5-0-10-24-2011" title="Permalink to this headline">¶</a></h2>
+<p>Committer: David Lapsley&lt;<a class="reference external" href="mailto:del&#37;&#52;&#48;haystack&#46;mit&#46;edu">del<span>&#64;</span>haystack<span>&#46;</span>mit<span>&#46;</span>edu</a>&gt;</p>
 <ul class="simple">
 <li>Version to be used for 16 Gbps demonstration.</li>
 </ul>
 </div>
-<div class="section" id="id10">
-<h3>FEATURES<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="release-0-6-0-11-13-2011">
+<h2>Release 0.6.0 11/13/2011<a class="headerlink" href="#release-0-6-0-11-13-2011" title="Permalink to this headline">¶</a></h2>
+<p>Committer: David Lapsley&lt;<a class="reference external" href="mailto:del&#37;&#52;&#48;haystack&#46;mit&#46;edu">del<span>&#64;</span>haystack<span>&#46;</span>mit<span>&#46;</span>edu</a>&gt;</p>
 <ul class="simple">
-<li>To be listed in official release.</li>
+<li>First public release!</li>
+<li>Includes 16 Gbps-capable data plane demonstrated on 10/24/2011 (and
+extensively tested).</li>
+<li>Incorporates Control Plane skeleton into build.</li>
+<li>Includes substantial online documentation (<a class="reference external" href="http://www.vdas.org">http://www.vdas.org</a>).</li>
+<li>Released under GPLv2.</li>
 </ul>
-</div>
 </div>
 </div>
 
@@ -274,43 +206,23 @@ be integrated into control plane as conditioning/test scripts).</li>
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Release Notes</a><ul>
-<li><a class="reference internal" href="#release-0-1-7-5-2011">Release 0.1     7/5/2011</a><ul>
-<li><a class="reference internal" href="#description">DESCRIPTION</a></li>
-<li><a class="reference internal" href="#features">FEATURES</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#release-0-2-7-7-2011">Release 0.2     7/7/2011</a><ul>
-<li><a class="reference internal" href="#id1">DESCRIPTION</a></li>
-<li><a class="reference internal" href="#id2">FEATURES</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#release-0-4-7-15-2011">Release 0.4     7/15/2011</a><ul>
-<li><a class="reference internal" href="#id3">DESCRIPTION</a></li>
-<li><a class="reference internal" href="#id4">FEATURES</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#release-0-4-1-9-20-2011">Release 0.4.1   9/20/2011</a><ul>
-<li><a class="reference internal" href="#id5">DESCRIPTION</a></li>
-<li><a class="reference internal" href="#id6">FEATURES</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#release-0-4-2-9-28-2011">Release 0.4.2   9/28/2011</a><ul>
-<li><a class="reference internal" href="#id7">DESCRIPTION</a></li>
-<li><a class="reference internal" href="#id8">FEATURES</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#release-0-5-0-10-24-2011">Release 0.5.0   10/24/2011</a><ul>
-<li><a class="reference internal" href="#id9">DESCRIPTION</a></li>
-<li><a class="reference internal" href="#id10">FEATURES</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#release-0-1-7-5-2011">Release 0.1 7/5/2011</a></li>
+<li><a class="reference internal" href="#release-0-2-7-7-2011">Release 0.2 7/7/2011</a></li>
+<li><a class="reference internal" href="#release-0-4-7-15-2011">Release 0.4 7/15/2011</a></li>
+<li><a class="reference internal" href="#release-0-4-1-9-20-2011">Release 0.4.1 9/20/2011</a></li>
+<li><a class="reference internal" href="#release-0-4-2-9-28-2011">Release 0.4.2 9/28/2011</a></li>
+<li><a class="reference internal" href="#release-0-5-0-10-24-2011">Release 0.5.0 10/24/2011</a></li>
+<li><a class="reference internal" href="#release-0-6-0-11-13-2011">Release 0.6.0 11/13/2011</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="todo.html"
-                        title="previous chapter">&lt;no title&gt;</a></p>
+  <p class="topless"><a href="faq.html"
+                        title="previous chapter">Frequently Asked Questions</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="team.html"
+                        title="next chapter">Team</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/news.txt"
@@ -340,9 +252,12 @@ be integrated into control plane as conditioning/test scripts).</li>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="todo.html" title="&lt;no title&gt;"
+          <a href="team.html" title="Team"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="faq.html" title="Frequently Asked Questions"
              >previous</a> |</li>
-        <li><a href="index.html">Mark6 VDAS 0.1 documentation</a> &raquo;</li> 
+        <li><a href="index.html">Mark6 VDAS 0.6.0alpha documentation</a> &raquo;</li> 
       </ul>
     </div>
 

@@ -29,9 +29,9 @@ Site Map
     install
     demo
     faq
-    todo
     news
     team
+    license
 
 Indices and tables
 ==================
